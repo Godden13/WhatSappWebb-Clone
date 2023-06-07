@@ -37,6 +37,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
         console.log(err.message)
       })
   }
+  
   return (
     <AuthContext.Provider value={{ user, faceBookSignIn}} > {isLoading ? null : children}</AuthContext.Provider>
   )
