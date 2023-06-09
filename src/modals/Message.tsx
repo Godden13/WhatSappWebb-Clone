@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import styles from "@/styles/Messages.module.css";
 import Computer from "@/assets/images/computer.jpg";
@@ -53,7 +53,10 @@ function Message() {
       <div className={styles.bottom__nav}>
         <div className={styles.bottom__nav__content}>
           <BsEmojiLaughing className={styles.sidebar__icons} />
-          <HiOutlinePaperClip className={styles.sidebar__icons} onClick={() => setSee(!see)}/>
+          <HiOutlinePaperClip
+            className={styles.sidebar__icons}
+            onClick={() => setSee(!see)}
+          />
           <form>
             <input type="text" placeholder="write a message" />
             <MdSend className={styles.sidebar__icons} />

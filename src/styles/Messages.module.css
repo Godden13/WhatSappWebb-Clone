@@ -154,7 +154,11 @@
   font-size: 23px;
   padding: 10px;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(7,102,203,1) 52%, rgba(0,112,230,1) 52%);
+  background: linear-gradient(
+    180deg,
+    rgba(7, 102, 203, 1) 52%,
+    rgba(0, 112, 230, 1) 52%
+  );
   transform: rotate(-5deg);
 }
 
@@ -163,7 +167,11 @@
   font-size: 23px;
   padding: 10px;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(184,62,203,1) 52%, rgba(191,89,207,1) 52%);
+  background: linear-gradient(
+    180deg,
+    rgba(184, 62, 203, 1) 52%,
+    rgba(191, 89, 207, 1) 52%
+  );
 }
 
 .multimedia {
