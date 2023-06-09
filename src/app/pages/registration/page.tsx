@@ -1,15 +1,13 @@
-"use client"
-import RegistrationForm from "@/modals/RegistrationForm";
-import Login from "@/modals/login/Login";
+"use client";
+
 import WhatsappInstruction from "@/modals/WhatsappInstruction";
 
-
-const  registration= () => {
+function registration() {
   return (
     <div>
-     < WhatsappInstruction/>
+      <WhatsappInstruction />
     </div>
   );
-};
+}
 
 export default registration;
