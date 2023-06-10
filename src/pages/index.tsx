@@ -1,9 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+"use client";
+import React from "react";
+import Styles from "@/styles/Landing.module.css";
+import Image from "next/image";
+import { GrSettingsOption } from "react-icons/gr";
+import { SlOptionsVertical } from "react-icons/sl";
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import Icon from "@/assets/images/Whatsapp.png";
+import Code from "@/assets/images/scan.png";
+import Scene from "@/assets/images/video.png";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,101 +21,57 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <div className={Styles.Landing__page}>
+        <div className={Styles.Main}>
+          <div className={Styles.Upper__section}>
+            <div className={Styles.Container}>
+              <div className={Styles.Icon__Field}>
+                <Image src={Icon} alt="whatsapp" height="45" />
+                <h4 className={Styles.iconame}>WHATSAPP WEB</h4>
+              </div>
+            </div>
+            <div className={Styles.Main__container}>
+              <div className={Styles.Box__infos}>
+                <section className={Styles.Section__one}>
+                  <div className={Styles.Instructions}>
+                    <h1 className={Styles.Header}>
+                      Use WhatsApp on your computer
+                    </h1>
+                    <div className={Styles.Steps}>
+                      <p>1. Open WhatsApp on your phone</p>
+                      <p className={Styles.Para}>
+                        2. Tap Menu{" "}
+                        <SlOptionsVertical className={Styles.Smallicons} /> or
+                        Settings{" "}
+                        <GrSettingsOption className={Styles.Smallicons} /> and
+                        select Linked Devices
+                      </p>
+                      <p>3. Tap on Link a device</p>
+                      <p>
+                        4. Point your phone to this screen to capture the QR
+                        code
+                      </p>
+                    </div>
+                  </div>
+                  <Image className={Styles.WhatsappImg} src={Code} alt="scan" />
+                </section>
+                <section className={Styles.Section__two}>
+                  <div className={Styles.Head__link}>
+                    <h1 className={Styles.Header1}>Tutorail</h1>
+                    <a
+                      href="https://faq.whatsapp.com/1317564962315842/?helpref=uf_share"
+                      className={Styles.Getlink}
+                    >
+                      Need help to get started?
+                    </a>
+                  </div>
+                  <Image src={Scene} alt="video" className={Styles.VideoImg} />
+                </section>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </div>
     </>
-  )
+  );
 }
