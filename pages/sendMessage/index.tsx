@@ -1,5 +1,3 @@
-import { useAuth } from "@/context/AuthContext";
-import { auth, db } from "@/fireBase/config";
 import {
   QuerySnapshot,
   addDoc,
@@ -11,6 +9,8 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import { useAuth } from "../../context/AuthContext";
+import { db } from "../../fireBase/config";
 
 export default function SendMessage() {
   const [message, setMessage] = useState<any>("");
