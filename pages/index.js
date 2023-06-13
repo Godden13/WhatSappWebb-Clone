@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+import Styles from "../styles/Landing.module.css";
 import { GrSettingsOption } from "react-icons/gr";
 import { SlOptionsVertical } from "react-icons/sl";
-import Styles from "../styles/Landing.module.css";
-/* import Icon from "../assets/images/whatsapp.png";
-import Code from "@/assets/images/scan.png";
-import Scene from "@/assets/images/video.png"; */
-
+import Icon from "../assets/images/Whatsapp.png"
+import Code from "../assets/images/scan.png";
+import Scene from "../assets/images/video.png";
 
 export default function Home() {
   return (
@@ -20,9 +19,13 @@ export default function Home() {
         <div className={Styles.Main}>
           <div className={Styles.Upper__section}>
             <div className={Styles.Container}>
-              <div className={Styles.Icon__Field}>
-               {/*  <Image src={Icon} alt="whatsapp" height="45" /> */}
+              <div className={Styles.Icon__field}>
+                <Image src={Icon} alt="whatsapp" height="45" />
                 <h4 className={Styles.iconame}>WHATSAPP WEB</h4>
+              </div>
+              <div className={Styles.Button__field}>
+                <button className={Styles.Button}>Login</button>
+                <button className={Styles.Button}>Signup</button> 
               </div>
             </div>
             <div className={Styles.Main__container}>
@@ -48,7 +51,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                 {/*  <Image className={Styles.WhatsappImg} src={Code} alt="scan" /> */}
+                  <Image className={Styles.WhatsappImg} src={Code} alt="scan" />
                 </section>
                 <section className={Styles.Section__two}>
                   <div className={Styles.Head__link}>
@@ -60,7 +63,7 @@ export default function Home() {
                       Need help to get started?
                     </a>
                   </div>
-               {/*    <Image src={Scene} alt="video" className={Styles.VideoImg} /> */}
+                  <Image src={Scene} alt="video" className={Styles.VideoImg} />
                 </section>
               </div>
             </div>

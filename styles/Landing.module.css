@@ -16,16 +16,39 @@
 .Container {
   align-items: center;
   display: flex;
-  justify-content: left;
-  margin-left: 180px;
+  justify-content: space-between;
   margin-top: 15px;
+  width: 86%;
 }
 
-.Icon__Field {
+.Icon__field {
   align-items: center;
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  margin-left: 180px;
+}
+
+.Button__field {
+  display: flex;
+  gap: 15px;
+}
+
+.Button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #f0f2f5;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.Button:hover {
+  background-color: #90ee90;
+  transition: 0.3s;
 }
 
 .whatsapp {
