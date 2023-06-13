@@ -4,6 +4,7 @@
   display: flex;
   font-family: "Fira Sans", sans-serif;
   justify-content: center;
+  width: 100%;
 }
 
 .Upper__section {
@@ -15,15 +16,39 @@
 .Container {
   align-items: center;
   display: flex;
-  justify-content: left;
-  margin-left: 180px;
+  justify-content: space-between;
   margin-top: 15px;
+  width: 86%;
 }
 
-.Icon__Field {
+.Icon__field {
   align-items: center;
   display: flex;
   gap: 10px;
+  margin-top: 10px;
+  margin-left: 180px;
+}
+
+.Button__field {
+  display: flex;
+  gap: 15px;
+}
+
+.Button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #f0f2f5;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.Button:hover {
+  background-color: #90ee90;
+  transition: 0.3s;
 }
 
 .whatsapp {
@@ -42,7 +67,6 @@
   display: flex;
   justify-content: center;
   height: 210vh;
-  margin-top: -10px;
   position: absolute;
   width: 100%;
 }
@@ -67,30 +91,32 @@
   height: 70vh;
   justify-content: space-between;
   margin: 60px auto;
-  width: 90%;
+  width: 88%;
 }
 
 .Instructions {
   color: #3b4a5a;
-  line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .Header {
   font-size: 30px;
   font-weight: 400;
-  margin-top: -20px;
 }
 
 .Steps {
-  font-size: 19px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 2.5;
+  margin-left: 5px;
 }
 
 .Smallicons {
   background-color: #eae6df;
   border-radius: 3px;
   color: #41525d;
-  font-size: 16px;
+  font-size: 23px;
   opacity: 0.5;
   padding: 4px;
 }
@@ -111,7 +137,7 @@
 }
 
 .Head__link {
-  line-height: 0.8;
+  line-height: 2;
   margin: 20px auto;
   text-align: center;
 }
@@ -130,4 +156,88 @@
 
 .Getlink:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .Container {
+    margin-left: 40px;
+  }
+
+  .Main {
+    height: 310vh;
+  }
+
+  .Upper__section {
+    background-color: #00a884;
+    height: 50vh;
+  }
+
+  .Box__infos {
+    height: 270vh;
+    width: 90vw;
+  }
+
+  .Section__one {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    height: 140vh;
+  }
+
+  .Steps {
+    font-size: 17px;
+  }
+
+  .WhatsappImg {
+    left: 27%;
+    position: relative;
+    top: 3%;
+  }
+
+  .Section__two {
+    height: 105vh;
+  }
+
+  @media screen and (max-width: 425px) {
+    .Icon__Field {
+      left: 8%;
+      position: relative;
+    }
+
+    .Main__container {
+      width: 100%;
+    }
+
+    .Main {
+      height: 310vh;
+      width: 95vw;
+    }
+
+    .Box__infos {
+      height: 270vh;
+      width: 100vw;
+    }
+
+    .Section__one {
+      height: 140vh;
+    }
+
+    .Steps {
+      font-size: 17px;
+    }
+
+    .WhatsappImg {
+      height: 200px;
+      width: 200px;
+    }
+
+    .Section__two {
+      height: 105vh;
+    }
+
+    .VideoImg {
+      height: 300px;
+      width: 400px;
+    }
+  }
 }
