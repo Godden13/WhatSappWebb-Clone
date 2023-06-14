@@ -1,5 +1,4 @@
 "use client";
-
 import Styles from "../../styles/Instruction.module.css";
 import InstructionImgIcon from "../../assets/images/whatlaptop.png";
 import Image from "next/image";
