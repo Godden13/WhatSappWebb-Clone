@@ -172,6 +172,10 @@
     height: 50vh;
   }
 
+  .Icon__field {
+    margin-left: 5px;
+  }
+
   .Box__infos {
     height: 270vh;
     width: 90vw;
