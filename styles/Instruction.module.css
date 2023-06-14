@@ -1,5 +1,5 @@
 .instruction {
-  width: 50%;
+  width: 100%;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -24,7 +24,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background-color: #25d366; */
   list-style: 2.3s;
 }
 
@@ -44,15 +43,14 @@
 
 .imgContainer {
   width: 60%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .image {
-  width: 48%;
-  height: 205px;
+  width: 70%;
+  height: 225px;
 }
 
 .teaxtparagraph {
@@ -81,10 +79,6 @@
 }
 
 @media (max-width: 768px) {
-  .instruction {
-    width: 55%;
-  }
-
   .imgContainer {
     width: 90%;
     margin-bottom: 5%;
@@ -104,7 +98,13 @@
     text-align: left;
   }
 
-  .first__containertext p{
+  .first__containertext p {
     text-align: left;
+  }
+}
+
+@media (max-width: 425px) {
+  .instruction {
+    display: none;
   }
 }

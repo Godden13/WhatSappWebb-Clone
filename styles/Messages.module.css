@@ -5,7 +5,7 @@
   background-image: url("../assets/images/whats-bg.png");
   background-size: cover;
   position: relative;
-  width: 50vw;
+  width: 100%;
 }
 
 .messages__container form {
@@ -183,4 +183,20 @@
   bottom: 65px;
   margin-left: 40px;
   width: 60px;
+}
+
+.arrowOut {
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.872);
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .messages__container {
+    height: 100vh;
+  }
+
+  .arrowOut {
+    display: initial;
+  }
 }
