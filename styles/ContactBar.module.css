@@ -16,14 +16,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 76vw;
+  width: 78vw;
+  position: relative;
+}
+
+.show {
+  width: 70%;
   position: relative;
 }
 
 .exchange {
   position: absolute;
   z-index: 1;
-  right: 0;
+  width: 100%;
+  top: 0;
 }
 
 .main {
@@ -59,6 +65,7 @@
   padding-left: 10px;
   height: 50px;
   position: sticky;
+  border-right: 1px solid #aba8a866;
 }
 
 .sidebar__input {
@@ -180,4 +187,32 @@
   justify-content: center;
   line-height: 1px;
   margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100vw;
+  }
+
+  .messages__container {
+    width: 80%;
+  }
+
+  .sidebar {
+    width: 40%;
+  }
+}
+
+@media (max-width: 425px) {
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .show {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
 }

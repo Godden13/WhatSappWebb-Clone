@@ -87,13 +87,15 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <WhatsappInstruction />
 
-              {chats && (
-                <div className={styles.exchange}>
-                  <Message />
-                </div>
-              )}
+              <div className={styles.show}>
+                <WhatsappInstruction />
+                {chats && (
+                  <div className={styles.exchange}>
+                    <Message setChats={setChats} />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
