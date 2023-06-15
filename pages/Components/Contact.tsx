@@ -12,12 +12,14 @@ import Flower from "../../assets/images/love.jpg";
 import { useState } from "react";
 import WhatsappInstruction from "./WhatsappInstruction";
 import Message from "./Message";
+import SidebarPopup from "./SidebarPopup";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   const [isHovering, setIsHovering] = useState(false);
   const [chats, setChats] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -26,6 +28,7 @@ export default function Contact() {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
   return (
     <>
       <div className={styles.background}>
@@ -44,9 +47,13 @@ export default function Contact() {
                       <MdGroups2 className={styles.sidebar__icons} />
                       <TbCircleDotted className={styles.sidebar__icons} />
                       <MdMessage className={styles.sidebar__icons} />
-                      <BsThreeDotsVertical className={styles.sidebar__icons} />
+                      <BsThreeDotsVertical
+                        className={styles.sidebar__icons}
+                        onClick={() => setMenu(!menu)}
+                      />
                     </div>
                   </div>
+                  {menu && <SidebarPopup />}
                   <div className={styles.input__holder}>
                     <div className={styles.input}>
                       <input
