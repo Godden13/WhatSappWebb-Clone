@@ -1,5 +1,4 @@
 "use client";
-
 import Styles from "../../styles/Instruction.module.css";
 import InstructionImgIcon from "../../assets/images/whatlaptop.png";
 import Image from "next/image";
@@ -10,12 +9,13 @@ const WhatsappInstruction = () => {
     <div className={Styles.instruction}>
       <div className={Styles.instruction__firstcontainer}>
         <div className={Styles.imgContainer}>
-          <Image src={InstructionImgIcon} alt="whatlaptop" />
+          <Image src={InstructionImgIcon} alt="whatlaptop"  className={Styles.image}/>
         </div>
         <div className={Styles.first__containertext}>
           <div className={Styles.teaxtheading}>
             <h2>Whatsapp Web</h2>
-            <div className={Styles.teaxtparagraph}>
+          </div>
+          <div className={Styles.teaxtparagraph}>
               <p>
                 Envoyez et recevez des messages sans avoir à garder votre
                 téléphone connecté. <br />
@@ -23,7 +23,6 @@ const WhatsappInstruction = () => {
                 1&nbsp;téléphone, simultanément.
               </p>
             </div>
-          </div>
         </div>
       </div>
       <div className={Styles.instruction__bottom}>

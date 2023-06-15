@@ -1,5 +1,5 @@
 .instruction {
-  width: 50vw;
+  width: 100%;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -11,6 +11,7 @@
 }
 
 .instruction__firstcontainer {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,18 +19,38 @@
 }
 
 .first__containertext {
-  width: 540px;
+  width: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  list-style: 2.3s;
+}
+
+.first__containertext p {
+  font-size: 14.8px;
+  max-width: 560px;
+  text-align: center;
 }
 
 .teaxtheading {
   text-align: center;
   font-size: 24px;
   font-weight: 500;
-  color: #747678;
+  color: #242527;
+  margin-bottom: 9px;
+}
+
+.imgContainer {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 70%;
+  height: 225px;
 }
 
 .teaxtparagraph {
@@ -54,5 +75,36 @@
 }
 
 .bottomicon {
-    text-align: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .imgContainer {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .image {
+    width: 95%;
+    height: 169px;
+    object-fit: fill;
+  }
+
+  .first__containertext {
+    width: 100%;
+  }
+
+  .teaxtparagraph {
+    text-align: left;
+  }
+
+  .first__containertext p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 425px) {
+  .instruction {
+    display: none;
+  }
 }
