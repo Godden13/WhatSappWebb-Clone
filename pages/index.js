@@ -6,8 +6,13 @@ import { SlOptionsVertical } from "react-icons/sl";
 import Icon from "../assets/images/Whatsapp.png"
 import Code from "../assets/images/scan.png";
 import Scene from "../assets/images/video.png";
-
+// import useAuth from "../context/AuthContext"
 export default function Home() {
+
+  // const handleClick = async ()=>{
+  //   await faceBookSignIn()
+
+  // }
   return (
     <div>
       <Head>

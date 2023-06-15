@@ -7,11 +7,11 @@ import {
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../fireBase/config";
+import Cookies from "universal-cookie"
+const cookies = new Cookies()
 
 const AuthContext = createContext<any>(null);
-
-export const useAuth = () => useContext(AuthContext);
-
+export const useAuth = ()=>useContext(AuthContext);
 export const AuthContextProvider = ({
   children,
 }: {
@@ -52,6 +52,7 @@ export const AuthContextProvider = ({
     signOut(auth)
       .then(() => {
         router.push("/");
+        cookies.remove("auth-cookies")
         console.log("logOut successful");
       })
       .catch((err) => {
