@@ -20,6 +20,7 @@ import PagePopup from "./PagePopup";
 function Message({ setChats }: any) {
   const [see, setSee] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [hover, setHover] = useState(false);
 
   return (
     <div className={styles.messages__container}>
@@ -42,11 +43,26 @@ function Message({ setChats }: any) {
         </div>
 
         <div className={styles.icons__holder}>
-          <BiSearchAlt2 className={styles.sidebar__icons} />
-          <BsThreeDotsVertical
-            className={styles.sidebar__icons}
-            onClick={() => setMenu(!menu)}
-          />
+          <BiSearchAlt2 className={styles.sidebar__icons} title="Search..." />
+          {hover ? (
+            <BsThreeDotsVertical
+              className={styles.sidebar__iconhover}
+              onClick={() => {
+                setMenu(!menu);
+                setHover(false);
+              }}
+              title="Menu"
+            />
+          ) : (
+            <BsThreeDotsVertical
+              className={styles.sidebar__icon}
+              onClick={() => {
+                setMenu(!menu);
+                setHover(true);
+              }}
+              title="Menu"
+            />
+          )}
         </div>
         {menu && <PagePopup />}
       </div>
@@ -67,6 +83,7 @@ function Message({ setChats }: any) {
           <HiOutlinePaperClip
             className={styles.sidebar__icons}
             onClick={() => setSee(!see)}
+            title="Attach"
           />
           <form>
             <input type="text" placeholder="write a message" />

@@ -64,6 +64,7 @@
   align-items: center;
   background-color: #f0f2f5;
   padding-left: 10px;
+  padding-right: 20px;
   height: 50px;
   position: sticky;
   border-right: 1px solid #aba8a866;
@@ -75,7 +76,7 @@
   border: 1px solid #f0f2f5;
   background-color: #f0f2f5;
   border-radius: 8px;
-  width: 90%;
+  width: 97%;
 }
 
 .profilUserImg {
@@ -88,6 +89,23 @@
   width: 50px;
   height: 48px;
   border-radius: 50%;
+}
+
+.sidebar__icon {
+  border-radius: 50%;
+  color: #54656f;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.sidebar__iconhover {
+  background-color: #d1d7db;
+  border-radius: 50%;
+  color: #54656f;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 10px;
 }
 
 .sidebar__icons {
@@ -120,7 +138,7 @@
   position: absolute;
   left: 0;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
   color: rgba(49, 49, 49, 0.903);
 }
 
