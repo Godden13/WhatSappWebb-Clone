@@ -3,21 +3,23 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../../styles/ContactBar.module.css";
 import { MdGroups2, MdMessage } from "react-icons/md";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical, BsFilter } from "react-icons/bs";
 import { BiChevronDown, BiSearchAlt2 } from "react-icons/bi";
 import { TbCircleDotted } from "react-icons/tb";
-import { IoMdArrowDropdown } from "react-icons/io";
 import Alan from "../../assets/images/pic.png";
 import Flower from "../../assets/images/love.jpg";
 import { useState } from "react";
 import WhatsappInstruction from "./WhatsappInstruction";
 import Message from "./Message";
+import SidebarPopup from "./SidebarPopup";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   const [isHovering, setIsHovering] = useState(false);
   const [chats, setChats] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [hover, setHover] = useState(false);
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -26,6 +28,7 @@ export default function Contact() {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
   return (
     <>
       <div className={styles.background}>
@@ -41,22 +44,54 @@ export default function Contact() {
                       className={styles.profilUserImg}
                     />
                     <div className={styles.icons__holder}>
-                      <MdGroups2 className={styles.sidebar__icons} />
-                      <TbCircleDotted className={styles.sidebar__icons} />
-                      <MdMessage className={styles.sidebar__icons} />
-                      <BsThreeDotsVertical className={styles.sidebar__icons} />
+                      <MdGroups2
+                        className={styles.sidebar__icons}
+                        title="Communities"
+                      />
+                      <TbCircleDotted
+                        className={styles.sidebar__icons}
+                        title="Status"
+                      />
+                      <MdMessage
+                        className={styles.sidebar__icons}
+                        title="New chat"
+                      />
+
+                      {hover ? (
+                        <BsThreeDotsVertical
+                          className={styles.sidebar__iconhover}
+                          onClick={() => {
+                            setMenu(!menu);
+                            setHover(false);
+                          }}
+                          title="Menu"
+                        />
+                      ) : (
+                        <BsThreeDotsVertical
+                        className={styles.sidebar__icon}
+                          onClick={() => {
+                            setMenu(!menu);
+                            setHover(true);
+                          }}
+                          title="Menu"
+                        />
+                      )}
                     </div>
                   </div>
+
+                  {menu && <SidebarPopup />}
                   <div className={styles.input__holder}>
                     <div className={styles.input}>
                       <input
-                        placeholder="search or start new conversation"
+                        placeholder="Search or start new chat"
                         className={styles.sidebar__input}
                       />
                       <BiSearchAlt2 className={styles.search} />
                     </div>
-
-                    <IoMdArrowDropdown className={styles.sidebar__icons} />
+                    <BsFilter
+                      className={styles.sidebar__icons}
+                      title="Unread chats filter"
+                    />
                   </div>
                 </div>
 

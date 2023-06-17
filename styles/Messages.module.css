@@ -29,7 +29,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f0f2f5;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 20px;
   height: 50px;
   position: sticky;
 }
@@ -40,8 +41,25 @@
   border-radius: 50%;
 }
 
+.sidebar__icon {
+  border-radius: 50%;
+  color: #54656f;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 10px;
+}
+.sidebar__iconhover {
+  background-color: #d1d7db;
+  border-radius: 50%;
+  color: #54656f;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 10px;
+}
+
 .sidebar__icons {
   color: gray;
+  cursor: pointer;
   font-size: 22px;
 }
 

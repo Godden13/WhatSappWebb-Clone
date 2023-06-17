@@ -15,15 +15,21 @@ import {
 import { HiOutlinePaperClip, HiPhotograph } from "react-icons/hi";
 import { MdSend, MdBarChart } from "react-icons/md";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import PagePopup from "./PagePopup";
 
 function Message({ setChats }: any) {
   const [see, setSee] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [hover, setHover] = useState(false);
 
   return (
     <div className={styles.messages__container}>
       <div className={styles.messages__nav}>
         <div className={styles.contact__infos}>
-          <AiOutlineArrowLeft className={styles.arrowOut}  onClick={() => setChats(false)}/>
+          <AiOutlineArrowLeft
+            className={styles.arrowOut}
+            onClick={() => setChats(false)}
+          />
           <Image
             src={Computer}
             alt="mainperson"
@@ -37,9 +43,28 @@ function Message({ setChats }: any) {
         </div>
 
         <div className={styles.icons__holder}>
-          <BiSearchAlt2 className={styles.sidebar__icons} />
-          <BsThreeDotsVertical className={styles.sidebar__icons} />
+          <BiSearchAlt2 className={styles.sidebar__icons} title="Search..." />
+          {hover ? (
+            <BsThreeDotsVertical
+              className={styles.sidebar__iconhover}
+              onClick={() => {
+                setMenu(!menu);
+                setHover(false);
+              }}
+              title="Menu"
+            />
+          ) : (
+            <BsThreeDotsVertical
+              className={styles.sidebar__icon}
+              onClick={() => {
+                setMenu(!menu);
+                setHover(true);
+              }}
+              title="Menu"
+            />
+          )}
         </div>
+        {menu && <PagePopup />}
       </div>
       {see && (
         <div className={styles.multimedia}>
@@ -58,6 +83,7 @@ function Message({ setChats }: any) {
           <HiOutlinePaperClip
             className={styles.sidebar__icons}
             onClick={() => setSee(!see)}
+            title="Attach"
           />
           <form>
             <input type="text" placeholder="write a message" />
