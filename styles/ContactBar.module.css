@@ -114,6 +114,16 @@
   font-size: 20px;
 }
 
+.sidebar__Icon {
+  color: gray;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.sidebar__Icon:hover {
+  color: #128c7e;
+}
+
 .icons__holder {
   display: flex;
   align-items: center;

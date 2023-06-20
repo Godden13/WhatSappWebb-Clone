@@ -89,7 +89,7 @@ export default function Contact() {
                       <BiSearchAlt2 className={styles.search} />
                     </div>
                     <BsFilter
-                      className={styles.sidebar__icons}
+                      className={styles.sidebar__Icon}
                       title="Unread chats filter"
                     />
                   </div>
