@@ -68,7 +68,7 @@ export default function Contact() {
                         />
                       ) : (
                         <BsThreeDotsVertical
-                        className={styles.sidebar__icon}
+                          className={styles.sidebar__icon}
                           onClick={() => {
                             setMenu(!menu);
                             setHover(true);
